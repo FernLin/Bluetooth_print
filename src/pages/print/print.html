@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>添加打印机</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div>
+    <p>第一步：搜索蓝牙设备</p>
+    <button ion-button block (click)='search()'>蓝牙搜索</button>
+  </div>
+  <div class="device">
+    <p>第二步：添加蓝牙设备</p>
+    <ion-row wrap>
+      <ion-col col-12 tappable *ngFor="let item of items" (click)="add(item)">
+        <div>设备名称：{{item.name}}</div>
+        <div style="margin-top:5px">设备地址：{{item.address}}</div>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

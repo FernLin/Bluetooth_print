@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>蓝牙通讯</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button *ngIf="addBtnShow" (click)='add()'>添加设备</button>
+  <button ion-button *ngIf="resetBtnShow" (click)='reset()'>重置设备</button>
+  <button ion-button (click)='print()'>打印单据</button>
+</ion-content>
